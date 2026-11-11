@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agenda Belajar VIII_Wahyuni - Program Layanan BK</title>
+<title>Agenda Belajar VIII_SITI WAHYUNI - Program Layanan BK</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); color: #1f2937; line-height: 1.6; padding: 20px; }
@@ -66,11 +66,11 @@ td.cell-rowspan { background:#f8fafc !important; text-align:center; vertical-ali
 .btn-simpan { background:#0ea5e9; color:white } .btn-simpan:hover { background:#0284c7 }
 .btn-reset { background:#f59e0b; color:white } .btn-reset:hover { background:#d97706 }
 .btn-ekspor { background:#8b5cf6; color:white } .btn-ekspor:hover { background:#6d28d9 }
-.notif { position:fVIIIed; top:20px; right:20px; background:#10b981; color:white; padding:14px 22px; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,0.15); font-weight:500; z-index:1000; transform:translateX(400px); transition:transform 0.4s ease }
+.notif { position:fixed; top:20px; right:20px; background:#10b981; color:white; padding:14px 22px; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,0.15); font-weight:500; z-index:1000; transform:translateX(400px); transition:transform 0.4s ease }
 .notif.show { transform:translateX(0) }
 .notif.error { background:#ef4444 }
 .notif.info { background:#0ea5e9 }
-.print-btn { position:fVIIIed; bottom:25px; right:25px; background:#10b981; color:white; border:none; padding:12px 22px; border-radius:30px; font-size:0.95em; font-weight:600; cursor:pointer; box-shadow:0 4px 15px rgba(16,185,129,0.4); transition:all 0.3s; z-index:100 }
+.print-btn { position:fixed; bottom:25px; right:25px; background:#10b981; color:white; border:none; padding:12px 22px; border-radius:30px; font-size:0.95em; font-weight:600; cursor:pointer; box-shadow:0 4px 15px rgba(16,185,129,0.4); transition:all 0.3s; z-index:100 }
 .print-btn:hover { background:#059669; transform:scale(1.05) }
 footer { background:#4c1d95; color:#cbd5e1; padding:25px 30px; text-align:center; font-size:0.9em }
 footer strong { color:white }
@@ -110,7 +110,7 @@ td.keterangan-cell { min-width:210px; }
 .btn-mini-url { background:#dbeafe; color:#1d4ed8; } .btn-mini-url:hover { background:#bfdbfe; }
 .btn-mini-foto { background:#fce7f3; color:#be185d; } .btn-mini-foto:hover { background:#fbcfe8; }
 .btn-mini-hapus { background:#fee2e2; color:#b91c1c; padding:3px 6px; } .btn-mini-hapus:hover { background:#fecaca; }
-.ket-lightbox { position:fVIIIed; inset:0; background:rgba(15,23,42,0.8); display:flex; align-items:center; justify-content:center; z-index:2000; cursor:zoom-out; }
+.ket-lightbox { position:fixed; inset:0; background:rgba(15,23,42,0.8); display:flex; align-items:center; justify-content:center; z-index:2000; cursor:zoom-out; }
 .ket-lightbox img { max-width:92vw; max-height:92vh; border-radius:8px; box-shadow:0 10px 40px rgba(0,0,0,0.5); background:#fff; }
 @media (max-width:640px) {
 .judul-dokumen h3 { font-size:14px }
@@ -181,12 +181,12 @@ footer p { font-size:0.7em }
 <div class="placeholder-logo" id="logoKananPlaceholder">Logo<br>Kanan</div>
 </div>
 </div>
-<div class="judul-dokumen"><h3>AGENDA BELAJAR VIII_SITI WAHYUNI</h3></div>
+<div class="judul-dokumen"><h3>AGENDA BELAJAR VIII_Siti Wahyuni</h3></div>
 <div class="info-banner">
 💡 <strong>Petunjuk:</strong>
 <br>• Semua cell bisa diedit langsung, termasuk <strong>Kelas</strong> dan <strong>Hari, Tanggal</strong>.
 <br>• Kolom <strong>Keterangan</strong>: teks + referensi link (<strong>🔗 URL</strong>) + bukti foto (<strong>📷 Foto</strong>).
-<br>• <strong>Foto otomatis di-upload ke folder Drive "Keterangan Sotya_Palupi_GBK_VIII"</strong> dan <strong>link-nya terekap di Spreadsheet</strong>, sehingga <strong>pasti muncul di laporan PDF</strong>.
+<br>• <strong>Foto otomatis di-upload ke folder Drive "Keterangan Siti_Wahyuni_GBK_VIII"</strong> dan <strong>link-nya terekap di Spreadsheet</strong>, sehingga <strong>pasti muncul di laporan PDF</strong>.
 <br>• Gunakan <strong>➕</strong> di kolom Aksi untuk menambah baris dalam No. yang sama.
 <br>• <strong>Siklus periode:</strong> isi <strong>D1</strong> → <em>Kirim</em> → PDF berisi <strong>D1</strong>. Klik <strong>🔢 Tambah No. Baru</strong> (atau 🔄 Reset) → isi <strong>D2</strong> → <em>Kirim</em> → <strong>D1 diduplikasi ke Sheet Riwayat</strong>, PDF berisi <strong>D1+D2</strong>. Seterusnya: <strong>D3 → PDF D1+D2+D3</strong>, dst.
 <br>• <strong>Menghapus data di dashboard TIDAK menghapus data di Sheet Aktif</strong> — Sheet bersifat <em>append-only</em> dan PDF selalu membaca seluruh Sheet Aktif.
@@ -244,7 +244,7 @@ Memuat URL backend...
 <button class="btn btn-ekspor" onclick="eksporCSV()">⬇️ Ekspor CSV</button>
 </div>
 <div class="table-wrapper">
-<table id="tabel-VIII_Wahyuni">
+<table id="tabel-VIII_Siti Wahyuni">
 <thead>
 <tr>
 <th>No</th>
@@ -259,7 +259,7 @@ Memuat URL backend...
 <th class="col-aksi">Aksi</th>
 </tr>
 </thead>
-<tbody id="tbody-VIII_Wahyuni"></tbody>
+<tbody id="tbody-VIII_Siti Wahyuni"></tbody>
 </table>
 </div>
 </section>
@@ -323,12 +323,12 @@ Memuat URL backend...
    ================================================================ */
 const DEFAULT_BACKEND_URL = 'https://script.google.com/macros/s/AKfycby3RJeGTosKGwEYnt8VtDDc-_i-DtnMxGwNR6eRc-CF6utHxQylvp3haJJtMdeh5Em-qA/exec';
 
-const STORAGE_KEY = 'agendaBK_VIII_Wahyuni';
-const BACKEND_KEY = 'agendaBK_backendUrl_VIII_Wahyuni';
-const HEADER_STORAGE_KEY = 'agendaBK_headerData_VIII_Wahyuni';
-const TTD_INFO_STORAGE_KEY = 'agendaBK_ttdInfoData_VIII_Wahyuni';
-const PERIODE_KEY = 'agendaBK_periodeBaru_VIII_Wahyuni';
-const GRUP_TERKIRIM_KEY = 'agendaBK_grupTerkirim_VIII_Wahyuni';
+const STORAGE_KEY = 'agendaBK_VIII_Siti Wahyuni';
+const BACKEND_KEY = 'agendaBK_backendUrl_VIII_Siti Wahyuni';
+const HEADER_STORAGE_KEY = 'agendaBK_headerData_VIII_Siti Wahyuni';
+const TTD_INFO_STORAGE_KEY = 'agendaBK_ttdInfoData_VIII_Siti Wahyuni';
+const PERIODE_KEY = 'agendaBK_periodeBaru_VIII_Siti Wahyuni';
+const GRUP_TERKIRIM_KEY = 'agendaBK_grupTerkirim_VIII_Siti Wahyuni';
 
 var imgKepsekBase64 = '';
 var imgGuruBase64 = '';
@@ -511,7 +511,7 @@ console.error('Gagal upload foto keterangan:', e);
 if (adaUpload) {
 simpanLocal(true);
 renderTabel();
-tampilkanNotif('📷 Foto keterangan ter-upload ke folder Drive Siti_Wahyuni_GBK_VIII', 'success');
+tampilkanNotif('📷 Foto keterangan ter-upload ke folder Drive Siti_WahyuniS_GBK_VIII', 'success');
 }
 return adaUpload;
 }
@@ -651,14 +651,14 @@ if (res && res.ok) {
 if (sisi === 'kiri') {
 logoKiriUrl = res.url;
 try {
-localStorage.setItem('agendaBK_logoKiriUrl_VIII_Wahyuni', res.url);
-localStorage.setItem('agendaBK_logoKiriB64_VIII_Wahyuni', b);
+localStorage.setItem('agendaBK_logoKiriUrl_VIII_Siti Wahyuni', res.url);
+localStorage.setItem('agendaBK_logoKiriB64_VIII_Siti Wahyuni', b);
 } catch (e) {}
 } else {
 logoKananUrl = res.url;
 try {
-localStorage.setItem('agendaBK_logoKananUrl_VIII_Wahyuni', res.url);
-localStorage.setItem('agendaBK_logoKananB64_VIII_Wahyuni', b);
+localStorage.setItem('agendaBK_logoKananUrl_VIII_Siti Wahyuni', res.url);
+localStorage.setItem('agendaBK_logoKananB64_VIII_Siti Wahyuni', b);
 } catch (e) {}
 }
 tampilkanNotif('🖼️ Logo ' + (sisi === 'kiri' ? 'Kiri' : 'Kanan') + ' ter-upload ke Drive', 'success');
@@ -699,10 +699,10 @@ function hapusLogo() {
 if (!confirm('Hapus semua logo dari dashboard? (File di Drive tidak ikut terhapus)')) return;
 logoKiriBase64 = ''; logoKananBase64 = ''; logoKiriUrl = ''; logoKananUrl = '';
 try {
-localStorage.removeItem('agendaBK_logoKiriUrl_VIII_Wahyuni');
-localStorage.removeItem('agendaBK_logoKiriB64_VIII_Wahyuni');
-localStorage.removeItem('agendaBK_logoKananUrl_VIII_Wahyuni');
-localStorage.removeItem('agendaBK_logoKananB64_VIII_Wahyuni');
+localStorage.removeItem('agendaBK_logoKiriUrl_VIII_Siti Wahyuni');
+localStorage.removeItem('agendaBK_logoKiriB64_VIII_Siti Wahyuni');
+localStorage.removeItem('agendaBK_logoKananUrl_VIII_Siti Wahyuni');
+localStorage.removeItem('agendaBK_logoKananB64_VIII_Siti Wahyuni');
 } catch (e) {}
 ['logoKiriImg', 'logoKananImg', 'logoPreviewKiri', 'logoPreviewKanan'].forEach(function(id) {
 var el = document.getElementById(id);
@@ -717,10 +717,10 @@ tampilkanNotif('🗑️ Semua logo dihapus dari dashboard', 'info');
 }
 function muatLogoDariStorage() {
 try {
-var kiriB64 = localStorage.getItem('agendaBK_logoKiriB64_VIII_Wahyuni');
-var kananB64 = localStorage.getItem('agendaBK_logoKananB64_VIII_Wahyuni');
-var kiriUrl = localStorage.getItem('agendaBK_logoKiriUrl_VIII_Wahyuni');
-var kananUrl = localStorage.getItem('agendaBK_logoKananUrl_VIII_Wahyuni');
+var kiriB64 = localStorage.getItem('agendaBK_logoKiriB64_VIII_Siti Wahyuni');
+var kananB64 = localStorage.getItem('agendaBK_logoKananB64_VIII_Siti Wahyuni');
+var kiriUrl = localStorage.getItem('agendaBK_logoKiriUrl_VIII_Siti Wahyuni');
+var kananUrl = localStorage.getItem('agendaBK_logoKananUrl_VIII_Siti Wahyuni');
 if (kiriB64) { setLogoKiriPreview(kiriB64); logoKiriBase64 = kiriB64; logoKiriUrl = kiriUrl || ''; }
 if (kananB64) { setLogoKananPreview(kananB64); logoKananBase64 = kananB64; logoKananUrl = kananUrl || ''; }
 updateLogoStatus();
@@ -740,7 +740,7 @@ setBackendStatus('📄 PDF diperbarui — ' + res.totalBaris + ' baris aktif', '
 window.open(res.pdfUrl, '_blank');
 } else {
 tampilkanNotif('❌ ' + (res && res.message ? res.message : 'Gagal membuat PDF'), 'error');
-window.open(getBackendUrl() + '?page=Sotya Palupi-GBK VIII', '_blank');
+window.open(getBackendUrl() + '?page=Siti Wahyuni-GBK VIII', '_blank');
 }
 } catch (err) {
 tampilkanNotif('⚠️ ' + err.message + ' — membuka halaman laporan manual', 'info');
@@ -847,7 +847,7 @@ if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
 document.body.appendChild(overlay);
 }
 function renderTabel() {
-const tbody = document.getElementById('tbody-VIII_Wahyuni');
+const tbody = document.getElementById('tbody-VIII_Siti Wahyuni');
 tbody.innerHTML = '';
 if (!Array.isArray(dataTabel) || dataTabel.length === 0) {
 tbody.innerHTML = '<tr><td colspan="10"><div class="empty-state"><span class="icon">📭</span>Belum ada data agenda.<br><small>Data lama tetap aman di Sheet Aktif &amp; Riwayat.</small></div></td></tr>';
@@ -874,7 +874,7 @@ isi += '<td class="keterangan-cell">'
 + bangunMediaKeterangan(grupIndex, barisIndex, baris)
 + '<div class="ket-tools">'
 + '<button class="btn-mini btn-mini-url" title="Isi / edit URL referensi" onclick="inputUrlKeterangan(' + grupIndex + ',' + barisIndex + ')">🔗 URL</button>'
-+ '<button class="btn-mini btn-mini-foto" title="Upload foto pendukung (masuk folder Drive Sotya_Palupi_GBK_VIII)" onclick="document.getElementById(\'ketFile-' + grupIndex + '-' + barisIndex + '\').click()">📷 Foto</button>'
++ '<button class="btn-mini btn-mini-foto" title="Upload foto pendukung (masuk folder Drive Siti_Wahyuni_GBK_VIII)" onclick="document.getElementById(\'ketFile-' + grupIndex + '-' + barisIndex + '\').click()">📷 Foto</button>'
 + '<input type="file" id="ketFile-' + grupIndex + '-' + barisIndex + '" accept="image/*" style="display:none" onchange="uploadFotoKeterangan(' + grupIndex + ',' + barisIndex + ', this)">'
 + '</div>'
 + '</td>';
@@ -1039,7 +1039,7 @@ csv += '"' + csvEsc(no) + '","'
 const blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8;' });
 const link = document.createElement('a');
 link.href = URL.createObjectURL(blob);
-link.download = 'Agenda-Belajar-VIII_Wahyuni.csv';
+link.download = 'Agenda-Belajar-VIII_Siti Wahyuni.csv';
 link.click();
 tampilkanNotif('⬇️ CSV diunduh', 'success');
 }
